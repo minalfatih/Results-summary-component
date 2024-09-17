@@ -1,0 +1,209 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --Light-red: hsl(0, 100%, 67%);
+  --Orangey-yellow: hsl(39, 100%, 56%);
+  --Green-teal: hsl(166, 100%, 37%);
+  --Cobalt-blue: hsl(234, 85%, 45%);
+  /* ## Gradients */
+  --Light-slate-blue: hsl(252, 100%, 67%); /*(background)*/
+  --Light-royal-blue: hsl(241, 81%, 54%); /*(background)*/
+  --Violet-blue: hsla(256, 72%, 46%, 1); /*(circle)*/
+  --Persian-blue: hsla(241, 72%, 46%, 0); /*(circle)*/
+  /* ### Neutral */
+  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+body {
+  background-color: var(--White);
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--White);
+  width: 660px;
+  height: 470px;
+  border-radius: 30px;
+  box-shadow: 5px 30px 60px 10px var(--Pale-blue);
+}
+@media (max-width: 660px) {
+  main {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+}
+section:first-child {
+  background-image: linear-gradient(
+    to bottom,
+    var(--Light-slate-blue),
+    var(--Light-royal-blue)
+  );
+  width: 330px;
+  height: 100%;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (max-width: 660px) {
+  section:first-child {
+    width: 100%;
+    border-radius: 0 0 30px 30px;
+  }
+}
+section:first-child h1 {
+  color: var(--Pale-blue);
+  margin-top: 0;
+}
+section:first-child .circle {
+  background-image: linear-gradient(
+    to bottom,
+    var(--Violet-blue),
+    var(--Persian-blue)
+  );
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (max-width: 660px) {
+  section:first-child .circle {
+    width: 150px;
+    height: 150px;
+  }
+}
+section:first-child .circle h1 {
+  color: var(--White);
+  margin: 0;
+  font-size: 60px;
+  font-weight: bold;
+}
+@media (max-width: 660px) {
+  section:first-child .circle h1 {
+    font-size: 50px;
+  }
+}
+section:first-child .circle p {
+  color: var(--Light-lavender);
+  margin: 0;
+}
+section:first-child .text {
+  text-align: center;
+  padding: 0 60px;
+}
+section:first-child .text h1 {
+  color: var(--White);
+  margin-top: 0;
+}
+@media (max-width: 660px) {
+  section:first-child .text h1 {
+    font-size: 20px;
+  }
+}
+section:first-child .text p {
+  color: var(--Light-lavender);
+}
+section:last-child {
+  width: 330px;
+  height: 100%;
+  padding: 40px;
+}
+@media (max-width: 660px) {
+  section:last-child {
+    width: 100%;
+    padding: 25px 30px;
+  }
+}
+section:last-child h1 {
+  color: var(--Dark-gray-blue);
+  margin-top: 0;
+}
+@media (max-width: 660px) {
+  section:last-child h1 {
+    font-size: 20px;
+  }
+}
+section:last-child .track {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+section:last-child .track div {
+  border-radius: 10px;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+section:last-child .track div .icon {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 8px;
+  padding-left: 0;
+}
+section:last-child .track div div p {
+  font-weight: bold;
+}
+section:last-child .track div p {
+  font-weight: normal;
+  color: hsl(0deg 0.5% 60.59%);
+}
+section:last-child .track .react div p {
+  color: var(--Light-red);
+}
+section:last-child .track .memory div p {
+  color: var(--Orangey-yellow);
+}
+section:last-child .track .verbal div p {
+  color: var(--Green-teal);
+}
+section:last-child .track .visual div p {
+  color: var(--Cobalt-blue);
+}
+section:last-child div p .score {
+  color: var(--Dark-gray-blue);
+  font-weight: bold;
+}
+.react {
+  background-color: hsl(0deg 100% 67% / 10%);
+}
+.memory {
+  background-color: hsl(39deg 100% 56% / 10%);
+}
+.verbal {
+  background-color: hsl(166deg 100% 37% / 10%);
+}
+.visual {
+  background-color: hsl(234deg 85% 45% / 10%);
+}
+button {
+  padding: 15px;
+  border-radius: 50px;
+  border: none;
+  background-color: var(--Dark-gray-blue);
+  color: var(--White);
+  margin-top: 20px;
+}
+button:hover {
+  cursor: pointer;
+  background-image: linear-gradient(
+    to bottom,
+    var(--Light-slate-blue),
+    var(--Light-royal-blue)
+  );
+}
